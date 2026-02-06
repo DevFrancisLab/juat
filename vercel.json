@@ -1,5 +1,3 @@
 {
-  "buildCommand": "bun install && bun run build",
-  "installCommand": "bun install",
-  "packageManager": "bun@1.2.23"
+  "buildCommand": "npm run build"
 }
