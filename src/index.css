@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* JUAT Design System - Accessibility First */
+
+@layer base {
+  :root {
+    /* Primary - Institutional Trust (Deep Indigo) */
+    --primary: 231 59% 29%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Inclusion & Innovation (Teal) */
+    --secondary: 180 68% 39%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent - Actions Only (Warm Gold) */
+    --accent: 42 89% 61%;
+    --accent-foreground: 231 59% 15%;
+    
+    /* Background - Off White */
+    --background: 210 40% 98%;
+    --foreground: 203 24% 16%;
+    
+    /* Card Surface - White */
+    --card: 0 0% 100%;
+    --card-foreground: 203 24% 16%;
+    
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 203 24% 16%;
+    
+    /* Border */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 231 59% 29%;
+    
+    /* Semantic Colors */
+    --success: 123 46% 34%;
+    --success-foreground: 0 0% 100%;
+    --error: 0 65% 47%;
+    --error-foreground: 0 0% 100%;
+    
+    /* Custom Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(231 59% 29%) 0%, hsl(231 59% 22%) 50%, hsl(180 68% 35%) 100%);
+    --card-shadow: 0 4px 6px -1px hsl(231 59% 29% / 0.1), 0 2px 4px -2px hsl(231 59% 29% / 0.1);
+    --card-shadow-hover: 0 20px 25px -5px hsl(231 59% 29% / 0.1), 0 8px 10px -6px hsl(231 59% 29% / 0.1);
+    --focus-ring: 0 0 0 3px hsl(42 89% 61% / 0.5);
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 231 59% 29%;
+
+    /* Accessibility */
+    --a11y-toolbar-bg: 231 59% 29%;
+    --a11y-toolbar-foreground: 0 0% 100%;
+    --skip-link-bg: 42 89% 61%;
+    --skip-link-foreground: 231 59% 15%;
+  }
+
+  .dark {
+    /* Dark Slate Background */
+    --background: 222 47% 11%;
+    --foreground: 220 14% 91%;
+    
+    /* Card Surface Dark */
+    --card: 222 41% 11%;
+    --card-foreground: 220 14% 91%;
+    
+    /* Primary stays the same for brand consistency */
+    --primary: 231 59% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - brighter in dark mode */
+    --secondary: 180 68% 45%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted */
+    --muted: 222 30% 18%;
+    --muted-foreground: 218 11% 65%;
+    
+    /* Popover */
+    --popover: 222 41% 11%;
+    --popover-foreground: 220 14% 91%;
+    
+    /* Border */
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 180 68% 45%;
+    
+    /* Custom Tokens Dark */
+    --hero-gradient: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(231 59% 18%) 50%, hsl(180 68% 25%) 100%);
+    --card-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.4);
+    
+    /* Sidebar Dark */
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 220 14% 91%;
+    --sidebar-primary: 180 68% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 15%;
+    --sidebar-accent-foreground: 220 14% 91%;
+    --sidebar-border: 222 30% 20%;
+    
+    /* Accessibility Toolbar Dark */
+    --a11y-toolbar-bg: 222 47% 8%;
+    --a11y-toolbar-foreground: 220 14% 91%;
+  }
+
+  /* High Contrast Mode */
+  .high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 0%;
+    --border: 0 0% 0%;
+    --accent: 42 100% 45%;
+    --accent-foreground: 0 0% 0%;
+  }
+
+  .dark.high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --accent: 42 100% 55%;
+    --accent-foreground: 0 0% 0%;
+  }
+
+  /* Font Size Scaling */
+  html {
+    font-size: 16px;
+    transition: font-size 0.2s ease;
+  }
+
+  html.text-sm {
+    font-size: 14px;
+  }
+
+  html.text-lg {
+    font-size: 18px;
+  }
+
+  html.text-xl {
+    font-size: 20px;
+  }
+
+  html.text-2xl {
+    font-size: 22px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Focus States - Accessibility */
+  *:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  /* Skip Link */
+  .skip-link {
+    @apply absolute left-4 bg-accent text-accent-foreground px-4 py-2 rounded-md font-semibold z-[100];
+    top: -100px;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  /* Keyboard Navigation Indicator */
+  .keyboard-nav *:focus {
+    outline: 3px solid hsl(var(--accent));
+    outline-offset: 2px;
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-card rounded-xl p-6 transition-all duration-300;
+    box-shadow: var(--card-shadow);
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Accessibility Toolbar */
+  .a11y-toolbar {
+    @apply w-full py-2 px-4;
+    background-color: hsl(var(--a11y-toolbar-bg));
+    color: hsl(var(--a11y-toolbar-foreground));
+  }
+
+  .a11y-btn {
+    @apply inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all;
+    @apply hover:bg-white/20 focus-visible:bg-white/20;
+    color: inherit;
+  }
+
+  .a11y-btn[aria-pressed="true"] {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  /* Hero Gradient */
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/80 dark:bg-card/80 backdrop-blur-lg;
+  }
+
+  /* Step Indicator */
+  .step-circle {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold;
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Section Heading */
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
+  }
+
+  .section-subheading {
+    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
+  }
+
+  /* Channel Badge */
+  .channel-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    @apply bg-secondary/10 text-secondary border border-secondary/20;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-8 relative;
+    box-shadow: var(--card-shadow);
+  }
+
+  /* Partner Logo */
+  .partner-logo {
+    @apply h-12 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300;
+  }
+
+  /* Footer */
+  .footer {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .dark .footer {
+    @apply bg-[hsl(222_47%_6%)];
+  }
+}
+
+@layer utilities {
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Animation Utilities */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Stagger Animation Delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Large Touch Target */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Screen Reader Only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
