@@ -229,25 +229,25 @@ export function HeroSection() {
                 {/* Chat Content */}
                 <div className="bg-background rounded-2xl p-3 h-64 lg:h-80 flex flex-col justify-between">
                   {/* Messages */}
-                  <div className="space-y-2 flex-1 overflow-hidden">
+                  <div className="space-y-3 flex-1 overflow-hidden">
                     {/* Assistant Message */}
                     <div className="flex gap-2">
-                      <div className="w-6 h-6 lg:w-8 lg:h-8 bg-accent rounded-full flex-shrink-0" />
-                      <div className="bg-muted rounded-lg p-2 text-xs lg:text-sm max-w-xs">
-                        <p className="font-semibold text-accent mb-1">JUAT Assistant</p>
-                        <p className="text-foreground">I found 12 hearing support programs available in Nairobi.</p>
+                      <div className="w-5 h-5 lg:w-7 lg:h-7 bg-accent rounded-full flex-shrink-0 mt-0.5" />
+                      <div className="bg-muted rounded-lg p-2.5 text-xs lg:text-xs max-w-full flex-1">
+                        <p className="font-semibold text-accent mb-2 text-xs">JUAT Assistant</p>
+                        <p className="text-foreground text-xs leading-relaxed break-words">I found 12 hearing support programs in Nairobi.</p>
                       </div>
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="space-y-2 mt-3 pl-8">
-                      <button className="w-full text-left px-2 py-1.5 bg-accent/20 text-accent rounded text-xs font-medium hover:bg-accent/30 transition-colors truncate">
+                    <div className="space-y-1.5 mt-2.5 pl-7">
+                      <button className="w-full text-left px-2 py-1 bg-accent/20 text-accent rounded text-xs font-medium hover:bg-accent/30 transition-colors line-clamp-1">
                         📱 Find Hearing Devices
                       </button>
-                      <button className="w-full text-left px-2 py-1.5 bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-xs font-medium hover:bg-blue-500/30 transition-colors truncate">
+                      <button className="w-full text-left px-2 py-1 bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-xs font-medium hover:bg-blue-500/30 transition-colors line-clamp-1">
                         🎯 Check Support Programs
                       </button>
-                      <button className="w-full text-left px-2 py-1.5 bg-green-500/20 text-green-700 dark:text-green-300 rounded text-xs font-medium hover:bg-green-500/30 transition-colors truncate">
+                      <button className="w-full text-left px-2 py-1 bg-green-500/20 text-green-700 dark:text-green-300 rounded text-xs font-medium hover:bg-green-500/30 transition-colors line-clamp-1">
                         ✅ Apply for Assistance
                       </button>
                     </div>
