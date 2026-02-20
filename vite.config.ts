@@ -16,5 +16,9 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: [".js", ".mjs", ".ts", ".tsx", ".json"],
+  },
+  ssr: {
+    noExternal: [],
   },
 }));
