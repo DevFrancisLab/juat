@@ -57,12 +57,10 @@ export function Footer() {
           <div className="lg:col-span-2">
             <a
               href="/"
-              className="flex items-center gap-2 mb-6"
+              className="flex items-center gap-3 mb-6"
               aria-label="JUAT - Home"
             >
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">J</span>
-              </div>
+              <img src="/juat-logo.svg" alt="JUAT logo" className="w-10 h-10 rounded-lg" />
               <span className="font-display font-bold text-2xl text-primary-foreground">JUAT</span>
             </a>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">

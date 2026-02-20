@@ -1,0 +1,10 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="juatLogoTitle">
+  <title id="juatLogoTitle">JUAT logo</title>
+  <rect width="120" height="120" rx="20" fill="#0EA5A3" />
+  <g transform="translate(18,18) scale(0.7)" fill="#ffffff">
+    <path d="M36 16a12 12 0 1 0 0 24 12 12 0 0 0 0-24zM36 8c15.464 0 28 12.536 28 28s-12.536 28-28 28S8 51.464 8 36 20.536 8 36 8z" opacity="0.16" />
+    <path d="M52 38c0 8.837-7.163 16-16 16s-16-7.163-16-16 7.163-16 16-16 16 7.163 16 16z"/>
+    <path d="M36 20a16 16 0 0 0-5.657 30.627L36 66l5.657-15.373A16 16 0 0 0 36 20z" opacity="0.08" />
+    <rect x="6" y="72" width="60" height="8" rx="4" />
+  </g>
+</svg>

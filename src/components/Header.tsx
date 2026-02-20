@@ -20,12 +20,10 @@ export function Header() {
           {/* Logo */}
           <a
             href="/"
-            className="flex items-center gap-2"
+            className="flex items-center gap-3"
             aria-label="JUAT - Home"
           >
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">J</span>
-            </div>
+            <img src="/juat-logo.svg" alt="JUAT logo" className="w-10 h-10 rounded-lg" />
             <span className="font-display font-bold text-2xl text-foreground">JUAT</span>
           </a>
 
